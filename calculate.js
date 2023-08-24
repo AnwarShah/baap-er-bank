@@ -37,7 +37,7 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const previousWithdrawTotal = getAmountDisplay('withdraw-display');
     const newWithdrawTotal = previousWithdrawTotal + withdrawAmount;
 
-    setAmountDisplay('withdraw-disiplay', newWithdrawTotal);
+    setAmountDisplay('withdraw-display', newWithdrawTotal);
 
     // update the balance
     const previousBalance = getAmountDisplay('balance-display');
