@@ -13,7 +13,7 @@ function getAmountDisplay(tagId){
 function getInputValue(inputTagId){
     const value = parseFloat(document.getElementById(inputTagId).value);
     clearInputField(inputTagId);
-    
+
     if (isNaN(value)) {
         return 0
     } else {
@@ -30,4 +30,16 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     // update new balance
     const previousBalance = getAmountDisplay('balance-display');
     setAmountDisplay('balance-display', depositAmount + previousBalance);
+})
+
+document.getElementById('withdraw-button').addEventListener('click', function(){
+    const withdrawAmount = getInputValue('withdraw-input');
+    const previousWithdrawTotal = getAmountDisplay('withdraw-display');
+    const newWithdrawTotal = previousWithdrawTotal + withdrawAmount;
+
+    setAmountDisplay('withdraw-disiplay', newWithdrawTotal);
+
+    // update the balance
+    const previousBalance = getAmountDisplay('balance-display');
+    setAmountDisplay('balance-display', previousBalance - withdrawAmount);    
 })
