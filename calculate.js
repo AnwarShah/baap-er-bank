@@ -15,6 +15,7 @@ function getInputValue(inputTagId){
     clearInputField(inputTagId);
 
     if (isNaN(value)) {
+        alert('Please enter a valid number');
         return 0
     } else {
         return value;
