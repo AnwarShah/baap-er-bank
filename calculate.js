@@ -38,9 +38,15 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const previousWithdrawTotal = getAmountDisplay('withdraw-display');
     const newWithdrawTotal = previousWithdrawTotal + withdrawAmount;
 
-    setAmountDisplay('withdraw-display', newWithdrawTotal);
-
+    
     // update the balance
     const previousBalance = getAmountDisplay('balance-display');
+    // if user tries to withDraw more than he has
+    if(previousBalance-withdrawAmount < 0 ){
+        alert("You have insufficient balance to withdraw $" + withdrawAmount);
+        return;
+    }
+
+    setAmountDisplay('withdraw-display', newWithdrawTotal);
     setAmountDisplay('balance-display', previousBalance - withdrawAmount);    
 })
