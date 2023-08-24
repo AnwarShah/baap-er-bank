@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Baaper Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="my-6">
+        <h1 class="text-5xl font-semibold text-center">Functional <span class="text-red-600">Baap-er-Bank</span>!!!</h1>
+    </header>
+    <main>
+        <section class="grid grid-cols-3 gap-8 mx-20 my-8">
+            <div class="bg-amber-400 py-14 pl-14 rounded-xl">
+                <h4 class="text-3xl text-white">Deposit</h4>
+                <h2 class="text-5xl text-white font-semibold">$<span id="deposit-display">00</span></h2>
+            </div>
+            <div class="bg-orange-700 py-14 pl-14 rounded-xl">
+                <h4 class="text-3xl text-white">Withdraw</h4>
+                <h2 class="text-5xl text-white font-semibold">$<span>00</span></h2>
+            </div>
+            <div class="bg-sky-500 py-14 pl-14 rounded-xl">
+                <h4 class="text-3xl text-white">Balance</h4>
+                <h2 class="text-5xl text-white font-semibold">$<span id="balance-display">1240</span></h2>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 gap-8 mx-20 my-8">
+            <div class="bg-pink-400 py-14 pl-14 rounded-xl">
+                <h4 class="text-3xl text-white">Your deposit</h4>
+                <input id="deposit-input" class="block py-2 px-2 my-2 border-sky-600 border-2 rounded-md w-3/4" type="text"
+                    placeholder="$Amount you want to deposit">
+                <button id="deposit-button"
+                    class="bg-blue-500 hover:bg-blue-600 px-10 py-2 text-white text-xl font-medium rounded-lg">Deposit</button>
+            </div>
+            <div class="bg-teal-400 py-14 pl-14 rounded-xl">
+                <h4 class="text-3xl text-white">Your Withdraw</h4>
+                <input class="block py-2 px-2 my-2 border-teal-600 border-2 rounded-md w-3/4" type="text"
+                    placeholder="$Amount you want to withdraw">
+                <button
+                    class=" bg-blue-500 hover:bg-blue-600 px-10 py-2 text-white text-xl font-medium rounded-lg">Withdraw</button>
+            </div>
+        </section>
+    </main>
+    <script src="calculate.js"></script>
+</body>
+
+</html>
